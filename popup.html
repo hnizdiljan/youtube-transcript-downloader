@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Transcript Downloader</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container" style="width: 400px; max-width: 100%;">
+        <div class="d-flex align-items-center mb-4">
+            <h1 id="extensionTitle" class="h4 m-0 w-100 text-center">YT Transcript</h1>
+        </div>
+
+        <div id="loadingBar" class="progress mb-3 d-none">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"></div>
+        </div>
+
+        <div id="alert" class="alert d-none" role="alert"></div>
+
+        <div id="transcriptSection" class="mb-3">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <h2 id="transcriptTitle" class="h6 m-0">Transcript</h2>
+                <button id="toggleTranscriptBtn" class="btn btn-outline-secondary btn-sm">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+            <div id="transcriptContent" class="collapse show">
+                <pre id="transcript" class="m-0"></pre>
+            </div>
+        </div>
+
+        <div class="d-grid gap-2">
+            <button id="downloadBtn" class="btn btn-primary">
+                <i class="fas fa-download"></i> <span>Download Transcript</span>
+            </button>
+            <button id="copyTranscriptBtn" class="btn btn-secondary">
+                <i class="fas fa-copy"></i> <span>Copy</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="lib/bootstrap.bundle.min.js"></script>
+    <script src="lib/i18next.min.js"></script>
+    <script src="lib/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="translations.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
